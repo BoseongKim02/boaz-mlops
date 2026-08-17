@@ -1,0 +1,10 @@
+venv/
+data/
+mlruns/
+mlflow.db
+logs/
+*.parquet
+*.csv
+model.txt
+__pycache__/
+.env
