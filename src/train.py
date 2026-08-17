@@ -19,6 +19,8 @@ def run():
     X_train, y_train = train[feature_cols], train[TARGET]
     X_valid, y_valid = valid[feature_cols], valid[TARGET]
 
+    mlflow.set_tracking_uri("sqlite:///mlflow.db")
+    mlflow.set_experiment("baf-fraud-detection")
     mlflow.set_experiment("baf-fraud-detection")
 
     with mlflow.start_run(run_name="lgbm-baseline"):
